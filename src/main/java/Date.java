@@ -3,19 +3,19 @@ import java.util.ArrayList;
 
 public class Date {
 	static String name;
-	enum monthName{January,Febuary,March,April,May,June,July,August,September,October,November,December};
+	enum MonthName{January,Febuary,March,April,May,June,July,August,September,October,November,December};
 	String[] week={"su ","mo ","tu ","we ","th ","fr ","sa "};
 	private int numDays=0;  
 	private static int last,  first, days,month;
 	private static int[][] dayCount= new int [5][7];
 	static ArrayList<Month> Cal= new ArrayList<Month>();
-	static monthName mo;
+	static MonthName mo;
 
-public static Month calAlg(monthName mo, int mnth){
+public static void calAlg(MonthName mo, int mnth){
 		
 		int i=0; int j=0; int k=0;
 		//
-		//name equals the iteration of monthName[];
+		//name equals the iteration of MonthName[];
 
         //int month = mnth ;
         int year = 2015;
@@ -87,7 +87,7 @@ public static Month calAlg(monthName mo, int mnth){
 		 if (Cal.isEmpty()) {
 	            System.out.println("Invalid month number");
 	        } else {
-	            for (String Cal: yr ) {
+	            for (String Cal: mo) {
 	               System.out.println(Cal);
 	            }
 	        }
@@ -125,7 +125,7 @@ public static Month calAlg(monthName mo, int mnth){
 		}//end January start
 		
 			}
-			return mnth;
+			//return mnth;
 		
 	}//end method
 }
