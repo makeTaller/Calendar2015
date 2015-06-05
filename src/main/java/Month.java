@@ -1,17 +1,20 @@
 import java.util.ArrayList;
 
+//import Date.MonthName;
+
 
 public class Month {
 	
 	static String name;
-	enum Year{January,Febuary,March,April,May,June,July,August,September,October,November,December};
+	enum MonthName{January,Febuary,March,April,May,June,July,August,September,October,November,December};
 	String[] week={"su ","mo ","tu ","we ","th ","fr ","sa "};
-	private static int[] numDays={31,28,30,31,30,31,31,30,30,31,30,31};  
-	private static int last,  first, days;
-	private static int[][] dayCount= new int [5][7];
+	public static final int[] numDays={31,28,30,31,30,31,31,30,30,31,30,31};  
+	public static final int last,  first, days;
+	public static final 
+	int[][] dayCount= new int [5][7];
 	ArrayList<Month> Cal= new ArrayList<Month>();
-	
-	Year yr;
+	Date dte=new Date();
+	MonthName mo;;
 	
 	public Month(){
 		//this.name= name; this.days=days; 
@@ -32,9 +35,9 @@ public class Month {
 	}
 	
 	public static void main(String args[]){
-		//Month Jan= new Month("January",31);
-		Date dte=new Date();
-		dte.calAlg();
+		Month jan= new Month();
+		
+		jan.dte.calAlg(January,1);
 	}//end main
 }//end class
 
