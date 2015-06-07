@@ -3,19 +3,19 @@ import java.util.ArrayList;
 
 public class Date {
 	static String name;
-	enum monthName{January,Febuary,March,April,May,June,July,August,September,October,November,December};
+	enum NAMES{January,Febuary,March,April,May,June,July,August,September,October,November,December};
 	String[] week={"su ","mo ","tu ","we ","th ","fr ","sa "};
 	private int numDays=0;  
 	private static int last,  first, days,month;
 	private static int[][] dayCount= new int [5][7];
 	static ArrayList<Month> Cal= new ArrayList<Month>();
-	static monthName mo;
+	static NAMES mo;
 
-public static Month calAlg(monthName mo, int mnth){
+public static Month calAlg(NAMES mo, int mnth){
 		
 		int i=0; int j=0; int k=0;
 		//
-		//name equals the iteration of monthName[];
+		//name equals the iteration of NAMES[];
 
         //int month = mnth ;
         int year = 2015;
@@ -106,8 +106,9 @@ public static Month calAlg(monthName mo, int mnth){
 							if (j==1) j=7;
 							dayCount[i][j]=days;
 							days++;
-							if(numDays[i]==31)
+							if(numDays==days)
 								last = first;
+							//what is first?
 							break;
 				}//end for
 		//}//end if
@@ -125,7 +126,7 @@ public static Month calAlg(monthName mo, int mnth){
 		}//end January start
 		
 			}
-			return mnth;
+			//return mnth;
 		
 	}//end method
 }
