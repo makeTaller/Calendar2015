@@ -8,8 +8,8 @@ public class Month {
 	static String name;
 	enum NAMES{January,Febuary,March,April,May,June,July,August,September,October,November,December};
 	String[] week={"su ","mo ","tu ","we ","th ","fr ","sa "};
-	public static final int[] numDays={31,28,30,31,30,31,31,30,30,31,30,31};  
-	public static final int last,  first, days;
+	public static final int[] NUM_DAYS={31,28,30,31,30,31,31,30,30,31,30,31};  
+	public  int end,  start, days;
 	public static final 
 	int[][] dayCount= new int [5][7];
 	ArrayList<Month> Cal= new ArrayList<Month>();
@@ -21,12 +21,12 @@ public class Month {
 		
 		
 		
-			for(int j=0;j<numDays.length;j++) days=numDays[j];
+			//for(int j=0;j<NUM_DAYS.length;j++) days=NUM_DAYS[j];
 				
 			System.out.println("Welcome to a 2015 Calendar\n");
 	}
-	//calAlg equals the last position in the week of the previous month.
-	//Fills the month to the number of numDays at the correct start day.
+	//calAlg equals the end position in the week of the previous month.
+	//Fills the month to the number of NUM_DAYS at the correct start day.
 	
 	public void setMonth(String nameIn)
     {
@@ -41,6 +41,11 @@ public class Month {
                 index = i;
     
                 return;
-            }
-        }
-    }
+            }//end if 
+        }//end for
+        
+    }//end setMonth
+	public static void main(String[] args){
+		
+	}//end main
+}//end Month Class 
